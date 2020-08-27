@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package tensorflow.serving;
+
+option go_package = "halo9pan.info/ant/internal/tensorflow_serving/servables/hashmap/hashmap_source_adapter_go_proto";
+
+// Config proto for HashmapSourceAdapter.
+message HashmapSourceAdapterConfig {
+  // The format used by the file containing a serialized hashmap.
+  enum Format {
+    // A simple kind of CSV text file of the form:
+    //  key0,value0\n
+    //  key1,value1\n
+    //  ...
+    SIMPLE_CSV = 0;
+  }
+  Format format = 1;
+}

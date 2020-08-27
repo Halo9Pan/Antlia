@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package tensorflow.serving;
+
+option cc_enable_arenas = true;
+option go_package = "halo9pan.info/ant/internal/tensorflow_serving/config/ssl_config_go_proto";
+
+// Configuration for a secure gRPC channel
+message SSLConfig {
+  // private server key for SSL
+  string server_key = 1;
+  // public server certificate
+  string server_cert = 2;
+  //  custom certificate authority
+  string custom_ca = 3;
+  // valid client certificate required ?
+  bool client_verify = 4;
+};

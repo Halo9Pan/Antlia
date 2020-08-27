@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package tensorflow.serving.test_util;
+option go_package = "halo9pan.info/ant/internal/tensorflow_serving/core/test_util/fake_loader_source_adapter_go_proto";
+
+// Config proto for FakeLoaderSourceAdapter.
+message FakeLoaderSourceAdapterConfig {
+  // FakeLoaderSourceAdapter's 'suffix' ctor parameter.
+  string suffix = 1;
+}

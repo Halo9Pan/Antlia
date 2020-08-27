@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package tensorflow.serving;
+
+option go_package = "halo9pan.info/ant/internal/tensorflow_serving/sources/storage_path/static_storage_path_source_go_proto";
+
+// Config proto for StaticStoragePathSource.
+message StaticStoragePathSourceConfig {
+  // The single servable name, version number and path to supply statically.
+  string servable_name = 1;
+  int64 version_num = 2;
+  string version_path = 3;
+}

@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package tensorflow.serving;
+
+option cc_enable_arenas = true;
+option go_package = "halo9pan.info/ant/internal/tensorflow_serving/apis/model_management_go_proto";
+
+import "tensorflow_serving/config/model_server_config.proto";
+import "tensorflow_serving/util/status.proto";
+
+message ReloadConfigRequest {
+  ModelServerConfig config = 1;
+}
+
+message ReloadConfigResponse {
+  StatusProto status = 1;
+}

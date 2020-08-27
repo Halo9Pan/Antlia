@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package tensorflow.serving.test_util;
+
+option go_package = "halo9pan.info/ant/internal/tensorflow_serving/model_servers/test_util/storage_path_error_injecting_source_adapter_go_proto";
+
+// Config proto for StoragePathErrorInjectingSourceAdapter.
+message StoragePathErrorInjectingSourceAdapterConfig {
+  // The error message the adapter emits.
+  string error_message = 1;
+}
